@@ -5,3 +5,5 @@ class Link(models.Model):
     link_title = models.CharField("Title", max_length=40)
     link_descrip = models.CharField("Link Description",max_length=200)
     link_url = models.URLField("Link URL")
+    def __str__(self):
+        return self.link_title
