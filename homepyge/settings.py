@@ -24,9 +24,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ['HOMEPYGE_SECRET']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+try:
+    # print(os.environ['HOMEPYGE_DEBUG'])
+    # print(type(bool(os.environ['HOMEPYGE_DEBUG'])))
+    # print(type(5))
+    DEBUG = True if os.environ['HOMEPYGE_DEBUG'] == 'True' else False
+except:
+    DEBUG =  False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.localhost','127.0.0.1']
 
 
 # Application definition
