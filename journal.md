@@ -43,3 +43,9 @@ Then:
 - then in `views.py` (which is really where we define what I would think of as endpoints rather than "views", but whatever), just simply return that `links.html` file when that function/endpoint is reached.
 
 Now, going to `mysite/links` takes me to that HTML page which renders properly in the browser!
+
+### admin panel
+
+Now for the admin panel. I just need to add a couple lines to `links/admin.py` to tell Django that the Links should be available from the admin panel. 
+
+I also need to create admin credentials. To do this, I use the terminal and just enter `python manage.py createsuperuser`. That's really it. Now I can just add Links directly through that admin terminal. Awesome!
