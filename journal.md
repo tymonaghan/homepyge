@@ -49,3 +49,14 @@ Now, going to `mysite/links` takes me to that HTML page which renders properly i
 Now for the admin panel. I just need to add a couple lines to `links/admin.py` to tell Django that the Links should be available from the admin panel. 
 
 I also need to create admin credentials. To do this, I use the terminal and just enter `python manage.py createsuperuser`. That's really it. Now I can just add Links directly through that admin terminal. Awesome!
+
+### rendering some links
+
+Now to get those links to render on my page. I think I'll need to adjust my `views` (to make the Link data accessible to the page) and then for now I'll just do a super-simple loop and show them all as list items.
+
+Here are the steps:
+
+- in `views.py` of the "links" app, I imported a shortcut function called `get_list_or_404` which I (apparently correctly) guessed would return the full list of my links
+- use that function to assign all my links to a variable (line 7)
+- provide that list as context to the template by adding it as a dictionary as the final argument to `render()`
+- then, I can just access that list from within the template, looping over it to create the links i need.

@@ -4,6 +4,11 @@
     <title>Links View</title>
 </head>
 <body>
-    <p>You are reaching /links/templates/links/links.html</p>
+    <h1>Ty's Homepage</h1>
+    <ul>
+        {% for link in links %}
+            <ul><a href={{link.link_url}} target="_blank">{{link.link_title}}</a></ul>
+        {% endfor %}
+    </ul>
 </body>
 </html>
