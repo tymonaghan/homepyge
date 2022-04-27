@@ -24,3 +24,9 @@ I am envisioning that I can eventually have a homepage that includes links, weat
 I accidentally exposed my `SECRET_KEY` so I erased it and am using an environment variable instead. Note that I had to set `HOMEPYGE_SECRET` in the OS but then also `export` it (I had never grasped that step before) so that it's [an environment variable and not just a shell variable](https://help.ubuntu.com/community/EnvironmentVariables).
 
 I also switched around some settings so that it will honor the environment variable of `HOMEPYGE_DEBUG`, if present, to set `DEBUG.` It defaults to `False` if not set, so that I don't accidentally publish my debug info in production.
+
+### Links app and models
+
+I went ahead and ran `python startapp links` (which I forgot to do earlier) to initialize my "Links" app. I registered it with my project in 'settings' and created a model for Links, which just has a title, description, and URL. I'll probably add other fields later, like at least an image to use for each.
+
+I then ran `python manage.py makemigrations links` followed by `python manage.py migrate` to actually run the SQL to update my tables.
