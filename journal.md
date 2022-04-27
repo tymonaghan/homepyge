@@ -30,3 +30,16 @@ I also switched around some settings so that it will honor the environment varia
 I went ahead and ran `python startapp links` (which I forgot to do earlier) to initialize my "Links" app. I registered it with my project in 'settings' and created a model for Links, which just has a title, description, and URL. I'll probably add other fields later, like at least an image to use for each.
 
 I then ran `python manage.py makemigrations links` followed by `python manage.py migrate` to actually run the SQL to update my tables.
+
+### URLs
+
+Now I want to be able to reach an actual "links" page (I'll deal with the fact that I want this to all be one page later). I used `include` to put in the pattern-matcher and send users to links.url, but that doesn't exist yet so I'll create it.
+
+Then:
+
+- add the URL pattern `path('', views.links, name="links")` to polls.urls.py
+- create `/template/links` folder in `links/`
+- create `links.html` file and plop it in that folder
+- then in `views.py` (which is really where we define what I would think of as endpoints rather than "views", but whatever), just simply return that `links.html` file when that function/endpoint is reached.
+
+Now, going to `mysite/links` takes me to that HTML page which renders properly in the browser!
