@@ -60,3 +60,9 @@ Here are the steps:
 - use that function to assign all my links to a variable (line 7)
 - provide that list as context to the template by adding it as a dictionary as the final argument to `render()`
 - then, I can just access that list from within the template, looping over it to create the links i need.
+
+### thoughts on getting started
+
+So, I feel like I'm in a good place for a first session. I got my project and app created, set up my model, and I can now add Links using the admin panel and view them in a simple, unformatted list of links by visiting `localhost:8000/links`. Next obvious step is to add some more formatting and sort the links into lists based on their category (which will also require a db update/migration).
+
+Another big thing I hadn't properly thought through was building and deployment. Deployment is going to be trickier than it was with a Node.js app, and just using the default settings results in an error (I also had to set an environment variable on Netlify called `PYTHON_VERSION` to get it to not use Python 2.7).  It sounds like Heroku might offer a more Django-friendly deployment option but it's not authorizing me into my GH account at the moment, so that will be something to try next time.
