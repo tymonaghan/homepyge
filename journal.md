@@ -46,7 +46,7 @@ Now, going to `mysite/links` takes me to that HTML page which renders properly i
 
 ### admin panel
 
-Now for the admin panel. I just need to add a couple lines to `links/admin.py` to tell Django that the Links should be available from the admin panel. 
+Now for the admin panel. I just need to add a couple lines to `links/admin.py` to tell Django that the Links should be available from the admin panel.
 
 I also need to create admin credentials. To do this, I use the terminal and just enter `python manage.py createsuperuser`. That's really it. Now I can just add Links directly through that admin terminal. Awesome!
 
@@ -72,3 +72,5 @@ Another big thing I hadn't properly thought through was building and deployment.
 Let's give [this](https://www.askpython.com/django/deploy-django-app-on-heroku) a whirl!
 
 Still getting a "failed to compile Python app" error. Now I'm trying a couple more changes from [this tutorial.](https://www.geeksforgeeks.org/how-to-deploy-django-application-on-heroku/)
+
+**Successfully deployed!** I am really excited about this. Thanks to @maansi1702 for GeeksForGeeks and AskPython for the tutorials that helped me overcome this hurdle. One important thing to note is that my CSS is not loading at all, so even the admin panel is just unformatted links. That will be the next thing to fix and then I can focus on UI and on organizing and categorizing the links!
