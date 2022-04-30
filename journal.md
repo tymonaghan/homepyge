@@ -70,3 +70,5 @@ Another big thing I hadn't properly thought through was building and deployment.
 ### deployment attempt
 
 Let's give [this](https://www.askpython.com/django/deploy-django-app-on-heroku) a whirl!
+
+Still getting a "failed to compile Python app" error. Now I'm trying a couple more changes from [this tutorial.](https://www.geeksforgeeks.org/how-to-deploy-django-application-on-heroku/)
