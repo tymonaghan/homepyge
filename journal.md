@@ -74,3 +74,7 @@ Let's give [this](https://www.askpython.com/django/deploy-django-app-on-heroku) 
 Still getting a "failed to compile Python app" error. Now I'm trying a couple more changes from [this tutorial.](https://www.geeksforgeeks.org/how-to-deploy-django-application-on-heroku/)
 
 **Successfully deployed!** I am really excited about this. Thanks to @maansi1702 for GeeksForGeeks and AskPython for the tutorials that helped me overcome this hurdle. One important thing to note is that my CSS is not loading at all, so even the admin panel is just unformatted links. That will be the next thing to fix and then I can focus on UI and on organizing and categorizing the links!
+
+### style attempt #1
+took a quick look at styles today. I followed the same steps I took in the [django tuturial](https://github.com/tymonaghan/djangotutorial/commit/6d06d7b390c34ce24d51b524caf5c7548845594e) but things are not working. I am getting this error:
+>   Refused to apply style from 'http://127.0.0.1:8000/static/links/style.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.

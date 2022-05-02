@@ -38,7 +38,7 @@ ALLOWED_HOSTS = ['.localhost','127.0.0.1','homepyge.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',
+    # 'whitenoise.runserver_nostatic',
     'links.apps.LinksConfig',
     'django.contrib.admin',
     'django.contrib.auth',
