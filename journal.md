@@ -76,5 +76,17 @@ Still getting a "failed to compile Python app" error. Now I'm trying a couple mo
 **Successfully deployed!** I am really excited about this. Thanks to @maansi1702 for GeeksForGeeks and AskPython for the tutorials that helped me overcome this hurdle. One important thing to note is that my CSS is not loading at all, so even the admin panel is just unformatted links. That will be the next thing to fix and then I can focus on UI and on organizing and categorizing the links!
 
 ### style attempt #1
+
 took a quick look at styles today. I followed the same steps I took in the [django tuturial](https://github.com/tymonaghan/djangotutorial/commit/6d06d7b390c34ce24d51b524caf5c7548845594e) but things are not working. I am getting this error:
->   Refused to apply style from 'http://127.0.0.1:8000/static/links/style.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
+> Refused to apply style from 'http://127.0.0.1:8000/static/links/style.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
+
+### style attempt #2 
+
+I found this little gem in the [Django docs](https://docs.djangoproject.com/en/4.0/howto/static-files/):
+> In addition to these configuration steps, you’ll also need to actually serve the static files.
+> During development, if you use django.contrib.staticfiles, this will be done automatically by runserver when DEBUG is set to True (see django.contrib.staticfiles.views.serve()).
+> This method is grossly inefficient and probably insecure, so it is unsuitable for production.
+
+So good of them to mention this in the tutorial! I was curious how we were getting around having a bundler, so this makes sense.
+
+So as of now, I have verified that the current code DOES apply styling to the links page as long as `DEBUG` is set to true. I'll need to keep learning about [how to handle static files in production](https://docs.djangoproject.com/en/4.0/howto/static-files/deployment/), so that's next.
