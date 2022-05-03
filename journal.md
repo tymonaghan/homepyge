@@ -90,3 +90,5 @@ I found this little gem in the [Django docs](https://docs.djangoproject.com/en/4
 So good of them to mention this in the tutorial! I was curious how we were getting around having a bundler, so this makes sense.
 
 So as of now, I have verified that the current code DOES apply styling to the links page as long as `DEBUG` is set to true. I'll need to keep learning about [how to handle static files in production](https://docs.djangoproject.com/en/4.0/howto/static-files/deployment/), so that's next.
+
+Oh, just an extra note: setting debug to TRUE and enabling static file collection also suddenly adds formatting to the admin panel. It's good to know that will take care of itself once I figure out how to get static files up and running on the deployed project.
